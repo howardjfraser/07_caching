@@ -8,4 +8,9 @@ class PersonTest < ActiveSupport::TestCase
   test 'valid' do
     assert @person.valid?
   end
+
+  test 'name is required' do
+    @person.name = nil
+    refute @person.valid?
+  end
 end
