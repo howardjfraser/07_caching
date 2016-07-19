@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "variables";
+@import "bootstrap-app";
+
+strong,
+.strong {
+  font-weight: 500;
+}
+
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+label {
+  @extend .text-muted;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  @extend .form-control;
+  @extend .form-group;
+}
+
+hr {
+  border-width: 1px !important;
+}
+
+.btn-secondary {
+  // color, background, border
+  @include button-variant(darken($brand-success, 5%), white, lighten($brand-success, 5%))
+}
+
+.btn {
+  min-width: 6em;
+}
+
+button {
+  @extend .btn;
+  @extend .btn-success;
+}
+
+.field_with_errors {
+    @extend .has-danger;
+    label {
+      @extend .text-danger;
+    }
+}
+
+.flash {
+  @extend .alert;
+  @include alert-variant(#ffc, #eee, $text-muted);
+  text-align: center;
+  padding: 0.5em 0.25em;
+  transform: rotate(-1deg);
+}
+
+.errors {
+  @extend .flash;
+  background-color: #ffe9ec;
+  transform: rotate(0deg);
+}
+
+.p-b-h {
+  padding-bottom: 0.5em;
+}
+
+.m-b-h {
+  margin-bottom: 0.5em;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  padding-bottom: 4px;
+}
+
+// fixed footer
+// html {
+//   max-width: 480px;
+//   position: relative;
+//   min-height: 100%;
+// }
+//
+// body {
+//   margin-bottom: 76px;
+//   background-color: #fff;
+// }
+//
+// footer {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   height: 76px;
+// }
