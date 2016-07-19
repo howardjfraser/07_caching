@@ -13,4 +13,11 @@ class PersonTest < ActiveSupport::TestCase
     @person.name = nil
     refute @person.valid?
   end
+
+  test 'name should be 48 chars or less' do
+    @person.name = 'a' * 48
+    assert @person.valid?
+    @person.name = 'a' * 49
+    refute @person.valid?
+  end
 end
