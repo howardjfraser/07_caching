@@ -1,19 +1,30 @@
 <% provide :title, 'About' %>
-<% provide :button, link_to("View Example".html_safe, people_path, class: 'btn btn-primary pull-xs-right') %>
 
 <p>
-  This is a simple example of basic <abbr title="Create, Read, Update, Delete">CRUD</abbr> operations for a
-  single resource, <em>People</em>.
+  Derailed 00 is a very simple example of
+  <abbr title="Create, Read, Update, Delete">CRUD</abbr> operations for a single resource, <em>People</em>.
 </p>
+<p>
+  It is the basis for all other Derailed example apps.
+</p>
+
+<%= link_to "View Example".html_safe, people_path, class: 'btn btn-primary btn-block m-y-2 m-x-auto' %>
 
 <p>
-  It doesn’t do a whole lot, but is the basis for other example apps.
+  While it doesn’t do a whole lot, it does demonstrate the following:
 </p>
 
-<p>
-  Among the things it does do&hellip;
-</p>
+<ol class="">
+  <li>asdasd</li>
+  <li>asdasd</li>
+  <li>asdasd</li>
+  <li>asdasd</li>
+  <li>asdasd</li>
+</ol>
 
-<p class='text-muted'>
-    Like all Derailed examples, you can see this app running on Heroku and the source code is on GitHub.
+<p class='text-muted m-t-3'>
+    Like all Derailed examples, you can see this app running on
+    <%= link_to 'Heroku', 'http://heroku.com', target: '_blank' %>
+    and find the source code on
+    <%= link_to 'GitHub', 'http://github.com', target: '_blank' %>.
 </p>
