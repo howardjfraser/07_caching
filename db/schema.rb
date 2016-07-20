@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20160720225642) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "job"
-    t.string   "bio"
+    t.string   "job_title"
+    t.text     "bio"
   end
 
 end

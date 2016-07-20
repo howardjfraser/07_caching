@@ -24,9 +24,8 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'valid create' do
-    new_name = 'Fred'
     assert_difference 'Person.count', 1 do
-      post people_path, params: { person: { name: str, job: str } }
+      post people_path, params: { person: { name: str, job_title: str } }
     end
     assert_response :redirect
     follow_redirect!

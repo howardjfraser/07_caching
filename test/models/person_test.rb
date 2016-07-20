@@ -21,15 +21,15 @@ class PersonTest < ActiveSupport::TestCase
     refute @person.valid?
   end
 
-  test 'job is required' do
-    @person.job = nil
+  test 'job_title is required' do
+    @person.job_title = nil
     refute @person.valid?
   end
 
-  test 'job should be 48 chars or less' do
-    @person.job = 'a' * 48
+  test 'job_title should be 48 chars or less' do
+    @person.job_title = 'a' * 48
     assert @person.valid?
-    @person.job = 'a' * 49
+    @person.job_title = 'a' * 49
     refute @person.valid?
   end
 

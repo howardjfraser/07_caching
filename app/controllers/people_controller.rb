@@ -58,6 +58,6 @@ class PeopleController < ApplicationController
 
   def person_params
     person_params = params[:person]
-    person_params ? person_params.permit(:name, :job, :bio) : {}
+    person_params ? person_params.permit(:name, :job_title, :bio) : {}
   end
 end

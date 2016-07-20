@@ -1,5 +1,5 @@
 class Person < ApplicationRecord
-  validates :name, :job, presence: true, length: { maximum: 48 }
+  validates :name, :job_title, presence: true, length: { maximum: 48 }
 
   scope :sorted, -> { order('lower(name)') }
 

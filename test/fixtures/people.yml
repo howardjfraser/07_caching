@@ -1,9 +1,9 @@
 david:
   name: David Jones
-  job: <%= FFaker::Job.title %>
+  job_title: <%= FFaker::Job.title %>
   bio: <%= FFaker::Lorem.paragraph %>
 
 michael:
   name: Michael Phillip
-  job: <%= FFaker::Job.title %>
+  job_title: <%= FFaker::Job.title %>
   bio: <%= FFaker::Lorem.paragraph %>

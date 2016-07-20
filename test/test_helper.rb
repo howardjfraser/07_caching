@@ -15,6 +15,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 
   def str
-    ('a'..'z').to_a.shuffle[0,12].join
+    ('a'..'z').to_a.sample(12).join
   end
 end
