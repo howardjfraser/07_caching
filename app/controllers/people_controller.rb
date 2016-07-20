@@ -49,7 +49,7 @@ class PeopleController < ApplicationController
   end
 
   def save_person(action)
-    redirect_to people_path, notice: "#{@person.name} has been #{action}" if @person.save
+    redirect_to @person, notice: "#{@person.name} has been #{action}" if @person.save
   end
 
   def people

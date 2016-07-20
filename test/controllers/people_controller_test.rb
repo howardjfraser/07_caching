@@ -29,7 +29,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :redirect
     follow_redirect!
-    assert_select 'h1', 'People'
+    assert_select 'h1', Person.last.name
     assert_select '.flash', "#{Person.last.name} has been created"
   end
 
@@ -51,8 +51,8 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
     patch person_path @person, params: { person: { name: str } }
     assert_response :redirect
     follow_redirect!
-    assert_select 'h1', 'People'
-    assert_select '.flash', "#{@person.reload.name} has been updated"
+    assert_select 'h1', @person.reload.name
+    assert_select '.flash', "#{@person.name} has been updated"
   end
 
   test 'invalid update' do
