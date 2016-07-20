@@ -21,6 +21,23 @@ class PersonTest < ActiveSupport::TestCase
     refute @person.valid?
   end
 
+  test 'job is required' do
+    @person.job = nil
+    refute @person.valid?
+  end
+
+  test 'job should be 48 chars or less' do
+    @person.job = 'a' * 48
+    assert @person.valid?
+    @person.job = 'a' * 49
+    refute @person.valid?
+  end
+
+  test 'bio is optional' do
+    @person.bio = nil
+    assert @person.valid?
+  end
+
   test 'first name' do
     assert @person.name == 'David Jones'
     assert @person.first_name == 'David'

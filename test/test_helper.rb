@@ -13,4 +13,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def str
+    ('a'..'z').to_a.shuffle[0,12].join
+  end
 end

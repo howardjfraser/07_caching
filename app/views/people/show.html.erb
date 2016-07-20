@@ -1,5 +1,15 @@
 <% provide :title, @person.name %>
 
+<h6>Job Title</h6>
+<p>
+  <%= @person.job %>
+</p>
+
+<h6>Bio</h6>
+<p class="m-b-2">
+  <%= "#{@person.bio}" %>
+</p>
+
 <%= link_to 'Edit', edit_person_path(@person), class: 'btn btn-success' %>
 
 <%= link_to 'Delete', @person, method: :delete, data:
