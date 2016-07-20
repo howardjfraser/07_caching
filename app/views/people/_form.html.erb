@@ -1,0 +1,9 @@
+<%= form_for @person do |f| %>
+
+  <%= label_or_error f, :name %>
+  <%= f.text_field :name, class: 'm-b-2', autofocus: true %>
+
+  <%= f.button 'Save' %>
+  <%= link_to 'Cancel', @person, class: 'btn btn-secondary' %>
+
+<% end %>

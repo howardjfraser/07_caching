@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    messages:
+      blank: "can’t be blank"
+      confirmation: "%{attribute}s don’t match"

@@ -20,4 +20,11 @@ class PersonTest < ActiveSupport::TestCase
     @person.name = 'a' * 49
     refute @person.valid?
   end
+
+  test 'first name' do
+    assert @person.name == 'David Jones'
+    assert @person.first_name == 'David'
+    @person.name = 'Keith'
+    assert @person.first_name == 'Keith'
+  end
 end

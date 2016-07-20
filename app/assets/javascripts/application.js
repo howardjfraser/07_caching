@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  $('body').on('click', '.flash', function(e) {
+    e.preventDefault();
+    // TODO: use CSS animation?
+    $(this).fadeToggle('fast');
+  });
+})

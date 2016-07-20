@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html class="m-x-auto">
+<html>
 
   <head>
-    <title>Base</title>
-
+    <title>Derailed 00 - Base</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container-fluid p-t-1">
+
+    <header>
+      <div class="container p-t-1">
+        <%= yield :button %>
+        <h1 class="m-b-1">
+          <span class="text-muted"><%= yield :subtitle %></span> <%= yield :title %>
+        </h1>
+      </div>
+    </header>
+
+    <div class="container p-t-1">
+      <% if flash[:notice] %>
+        <div class="text-xs-center text-muted flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
+
+    <footer>
+      <div class="container m-t-2">
+        <div class="pull-xs-right">
+          <%= link_to 'about', root_path, class: '' %>
+        </div>
+        <div>
+          <%= link_to 'home', people_path, class: '' %>
+        </div>
+      </div>
+    </footer>
+
   </body>
 
 </html>

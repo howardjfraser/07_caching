@@ -1,7 +1,11 @@
-<h1>People</h1>
-<hr>
+<% provide :button, link_to('Add Person', new_person_path, class: 'btn btn-success pull-xs-right') %>
+<% provide :title, 'People' %>
+
+<ul class="list-unstyled">
 <% @people.each do |p| %>
-  <div class="p-b-h">
-    <%= p.name %>
-  </div>
+    <li class="p-b-h">
+      <%= p.name %>
+      <%= link_to 'view', p %>
+    </li>
 <% end %>
+</ul>
