@@ -6,12 +6,12 @@
   <%= f.text_field :name, class: '', autofocus: true %>
 
   <%= label_or_error f, :job_title %>
-  <%= f.text_field :job_title, class: '', autofocus: true %>
+  <%= f.text_field :job_title, class: '' %>
 
   <%= label_or_error f, :bio %>
-  <%= f.text_area :bio, class: 'm-b-2', autofocus: true %>
+  <%= f.text_area :bio, class: 'm-b-2', rows: '3' %>
 
-  <%= f.button 'Save' %>
-  <%= link_to 'Cancel', @person, class: 'btn btn-secondary' %>
+  <%= f.button 'Save', class: 'm-b-1' %>
+  <%= link_to 'Cancel', @person, class: 'btn btn-secondary m-b-1' %>
 
 <% end %>
