@@ -44,7 +44,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   test 'get edit' do
     get edit_person_path @person
     assert_response :success
-    assert_select 'h1', "People / Edit"
+    assert_select 'h1', 'People / Edit'
   end
 
   test 'valid update' do
