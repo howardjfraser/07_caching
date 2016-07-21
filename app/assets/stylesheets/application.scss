@@ -48,7 +48,7 @@ textarea {
 
 .btn-secondary {
   // color, background, border
-  @include button-variant(darken($brand-success, 5%), #fffffe, lighten($brand-success, 5%))
+  @include button-variant(darken($brand-success, 10%), lighten(#98FB98, 30%), lighten($brand-success, 10%))
 }
 
 .btn {
