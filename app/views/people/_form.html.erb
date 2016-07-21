@@ -1,5 +1,7 @@
 <%= form_for @person do |f| %>
 
+  <%= render partial: 'shared/base_errors', locals: { object: @person } %>
+
   <%= label_or_error f, :name %>
   <%= f.text_field :name, class: '', autofocus: true %>
 
