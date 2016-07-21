@@ -17,12 +17,13 @@
       <div class="container p-t-1">
         <%= yield :button %>
         <h1 class="m-b-1">
-          <span class="text-muted"><%= yield :subtitle %></span> <%= yield :title %>
+          <%= yield :nav %>
+          <%= yield :title %>
         </h1>
       </div>
     </header>
 
-    <div class="container p-t-1">
+    <div class="container p-y-1">
       <% if flash[:notice] %>
         <div class="text-xs-center text-muted flash">
           <%= flash[:notice] %>
