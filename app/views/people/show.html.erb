@@ -1,5 +1,6 @@
-<% provide :nav, "#{link_to 'People', people_path} <span class='text-muted'>/</span>".html_safe %>
 <% provide :title, @person.name %>
+
+<%= render partial: 'people_nav' %>
 
 <h6>Job Title</h6>
 <p>
