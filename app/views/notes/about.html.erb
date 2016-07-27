@@ -1,5 +1,5 @@
-<% provide :button, link_to("Go".html_safe, people_path, class: 'btn btn-info pull-xs-right') %><% provide :nav, 'Derailed 00' %>
-<% provide :title, 'Foundation' %>
+<% provide :nav, 'Derailed 00' %>
+<% provide :title, link_to('Foundation', people_path) %>
 
 <p>
   Derailed 00 is a very simple example of
