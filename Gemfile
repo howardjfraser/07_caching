@@ -26,6 +26,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'poltergeist'
   gem 'minitest-reporters'
   gem 'simplecov'
 end
