@@ -21,3 +21,6 @@ module Base
     end
   end
 end
+
+APP_NUMBER = '00'.freeze
+APP_NAME = 'Foundation'.freeze
