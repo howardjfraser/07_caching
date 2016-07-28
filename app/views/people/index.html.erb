@@ -4,7 +4,8 @@
 
 <div id="people">
 
-  <input type="text" class="search" placeholder="Filter&hellip;" autofocus="true" />
+  <label for="filter" class="sr-only">Filter</label>
+  <input id="filter" type="text" class="search" placeholder="Filter&hellip;" autofocus="true" />
 
   <ul class="list list-unstyled">
     <% @people.each do |p| %>
