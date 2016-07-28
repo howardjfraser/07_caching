@@ -41,11 +41,6 @@ GEM
     addressable (2.4.0)
     ansi (1.5.0)
     arel (7.1.1)
-    autoprefixer-rails (6.3.7)
-      execjs
-    bootstrap (4.0.0.alpha3)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.5)
     capybara (2.7.1)
@@ -190,7 +185,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap
   byebug
   capybara
   coffee-rails (~> 4.2)
