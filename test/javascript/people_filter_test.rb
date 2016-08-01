@@ -8,14 +8,14 @@ class PeopleFilterTest < ActionDispatch::IntegrationTest
 
   test 'filter people' do
     visit '/people'
-    page.has_content? 'David'
-    page.has_content? 'Michael'
+    assert page.has_content? 'David'
+    assert page.has_content? 'Michael'
     filter 'zz'
-    page.has_content? 'David'
-    page.has_content? 'Michael'
+    assert page.has_no_content? 'David'
+    assert page.has_no_content? 'Michael'
     filter 'av'
-    page.has_content? 'David'
-    !(page.has_content? 'Michael')
+    assert page.has_content? 'David'
+    assert page.has_no_content? 'Michael'
   end
 
   private
