@@ -1,9 +1,11 @@
 <% provide :button, link_to("Add New", new_person_path, class: 'btn btn-success pull-xs-right') %>
 <% provide :title, 'People' %>
 
-<ul class="list list-unstyled">
-  <%= render @people %>
-</ul>
+<% cache @people do %>
+  <ul class="list list-unstyled">
+    <%= render @people, cached: true %>
+  </ul>
+<% end %>
 
 <div class="text-muted m-t-1">
   <%= pluralize @people.count, 'person' %>
