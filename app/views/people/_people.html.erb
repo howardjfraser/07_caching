@@ -1,7 +1,10 @@
 <div id="people">
-  <ul class="list list-unstyled">
-    <%= render @people %>
-  </ul>
+
+  <% cache @people do %>
+    <ul class="list list-unstyled">
+      <%= render @people %>
+    </ul>
+  <% end %>
 
   <div class="text-muted m-t-2">
     <%= pluralize @people.count, 'person' %>
